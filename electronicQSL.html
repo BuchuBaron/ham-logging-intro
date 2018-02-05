@@ -4,10 +4,19 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Intro to Electronic QSL</title>
+
+    <meta name="description"
+      content="A presentation on getting started with electronic QSL.">
+    <meta name="author" content="Charles Oertel (ZS1CJO)">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/night.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -31,34 +40,89 @@
         </section>
         <section>
           <section>
-            <h1>Electronic QSL “card” Overview</h1>
+            <h2>Electronic QSL “card” Overview</h2>
             <ol>
-              <li>LoTW</li>
-              <li>eQSL</li>
-              <li>ClubLog</li>
-              <li>SARL</li>
+              <li class="fragment">LoTW</li>
+              <li class="fragment">eQSL</li>
+              <li class="fragment">SARL</li>
+              <li class="fragment">ClubLog</li>
             </ol>
-            <section>
-              <h2>LotW</h2>
-              <p><em><b>L</b>ogbook of <b>The</b> <b>W</b>orld</em></p>
-              <p>http://www.arrl.org/logbook-of-the-world</p>
-              <ul>Logbook of the World (LoTW) is an online service that enables you to
-                <li>electronically submit contacts (QSOs) for confirmation</li>
-                <li>view your submitted QSOs and resulting confirmations online</li>
-                <li>view your DXCC, VUCC, WAS, WAZ and WPX award progress online</li>
-                <li>electronically submit confirmations for credit toward DXCC, VUCC, WAS, WAZ and WPX awards</li>
-              </ul>
-            </section>
           </section>
           <section>
-            <h1>Electronic Logging Process</h1>
-            <ul>
-              <li>CTARC ILLW Logs</li>
+            <h3>LotW</h3>
+            <p><em><b>L</b>ogbook of <b>The</b> <b>W</b>orld</em></p>
+            <p>http://www.arrl.org/logbook-of-the-world</p>
+            <ul>Logbook of the World (LoTW) is an online service that enables you to
+              <li class="fragment highlight-red">electronically submit contacts (QSOs) for confirmation</li>
+              <li class="fragment highlight-red">view your submitted QSOs and resulting confirmations online</li>
+              <li class="fragment highlight-red">view your DXCC, VUCC, WAS, WAZ and WPX award progress online</li>
+              <li class="fragment highlight-red">electronically submit confirmations for credit toward DXCC, VUCC, WAS, WAZ and WPX awards</li>
             </ul>
           </section>
           <section>
-            <h1>Log Formats</h1>
+            <h3>eQSL</h3>
+            <p>http://www.eqsl.cc</p>
+            <img src="eQSL/eQSL.jpg">
           </section>
+          <section>
+            <h2>SARL</h2>
+            <ul>
+              <li class="fragment">For local contests, QSLs and Awards.</li>
+              <li class="fragment">For SARL members only.</li>
+              <li class="fragment">Current online logging mechanisms hand-built and not very robust.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>ClubLog</h3>
+            <ol>
+              <li>New to me.</li>
+              <li>http://clublog.org</li>
+              <li>Here is a video typical of any site that requires registration:</li>
+            </ol>
+          </section>
+          <section>
+            <h4>Clublog</h4>
+            <video width="100%" controls>
+              <source data-src="Clublog.ogv" type="video/ogg" />
+            </video>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Electronic Logging Process</h2>
+            <h3>CTARC ILLW Logs</h3>
+            <ol>
+              <li class="fragment">During the ILLS Weekend QSOs are captured on paper.</li>
+              <li class="fragment">The paper logs are captured electronically to provide QSLs to international and local amateurs.</li>
+              <li class="fragment">Electronic logs are uploaded to:
+                <ol>
+                  <li>LoTW,</li>
+                  <li>eQSL,</li>
+                  <li>eQSL and the SARL.</li>
+                </ol>
+              </li>
+            </ol>
+          </section>
+          <section>
+            <h2>Capturing the Logs</h2>
+            <p>Paper logs often hard to read or interpret...</p>
+          </section>
+          <section>
+            <h2>xLog</h2>
+            <p>An open-source logging program.  You can use any other program that allows exporting to ADIF and/or CSV.</p>
+          </section>
+          <section>
+            <h2>LoTW</h2>
+          </section>
+          <section>
+            <h2>eQSL</h2>
+          </section>
+          <section>
+            <h2>SARL</h2>
+          </section>
+        </section>
+        <section>
+          <h1>Log Formats</h1>
         </section>
 			</div>
 		</div>
@@ -71,6 +135,7 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+        transition: 'zoom',
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
