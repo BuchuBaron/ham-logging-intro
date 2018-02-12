@@ -1,10 +1,10 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Intro to Electronic QSL</title>
+    <title>Intro to Electronic QSL</title>
 
     <meta name="description"
       content="A presentation on getting started with electronic QSL.">
@@ -15,32 +15,46 @@
     <meta name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/night.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/night.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
           <h1>Intro to Electronic QSL</h1>
           <p>A crash course in getting started</p>
           <p><em>by Charles Oertel (ZS1CJO)</em></p>
         </section>
         <section>
           <section>
-            <h2>Electronic QSL “card” Overview</h2>
+            <h2>Benefits of Keeping your Logs Online:</h2>
+            <ol>
+              <li class="fragment highlight-red"><strong>Safer:</strong> your logs are kept and managed by professionals and are safe from your computer crashing or being stolen</li>
+              <li class="fragment highlight-blue"><strong>Cheaper:</strong> no postage fees and hassle</li>
+              <li class="fragment"><strong>More Functionality:</strong>
+                <ul>
+                  <li class="fragment">Easy for others to confirm QSOs</li>
+                  <li class="fragment">Sophisticated reporting tools</li>
+                  <li class="fragment">Automatic/Manual submissions for various awards</li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+          <section>
+            <h2>Electronic QSL Sites:</h2>
             <ol>
               <li class="fragment">LoTW</li>
               <li class="fragment">eQSL</li>
@@ -50,13 +64,13 @@
           </section>
           <section>
             <h3>LotW</h3>
-            <p><em><b>L</b>ogbook of <b>The</b> <b>W</b>orld</em></p>
+            <p><em><b>L</b>ogbook <b>o</b>f <b>T</b>he <b>W</b>orld</em></p>
             <p>http://www.arrl.org/logbook-of-the-world</p>
             <ul>Logbook of the World (LoTW) is an online service that enables you to
-              <li class="fragment highlight-red">electronically submit contacts (QSOs) for confirmation</li>
+              <li class="fragment grow">electronically submit contacts (QSOs) for confirmation</li>
               <li class="fragment highlight-red">view your submitted QSOs and resulting confirmations online</li>
-              <li class="fragment highlight-red">view your DXCC, VUCC, WAS, WAZ and WPX award progress online</li>
-              <li class="fragment highlight-red">electronically submit confirmations for credit toward DXCC, VUCC, WAS, WAZ and WPX awards</li>
+              <li class="fragment grow">electronically submit confirmations for credit toward DXCC, VUCC, WAS, WAZ and WPX awards</li>
+              <li class="fragment highlight-blue">view your DXCC, VUCC, WAS, WAZ and WPX award progress online</li>
             </ul>
           </section>
           <section>
@@ -91,9 +105,8 @@
           <h2>Electronic Logging Process</h2>
           <h3>CTARC ILLW Logs</h3>
           <ol>
-            <li class="fragment">During the ILLS Weekend QSOs are captured on paper.</li>
-            <li class="fragment">The paper logs are captured electronically so they can be imported to various sites.</li>
-            <li class="fragment">The electronic logs are uploaded to:
+            <li class="fragment">During the ILLS Weekend QSOs are logged on paper.</li>
+            <li class="fragment">The paper logs are captured electronically to be imported to various sites:</li>
               <ol>
                 <li>LoTW,</li>
                 <li>eQSL, and</li>
@@ -103,9 +116,13 @@
           </ol>
         </section>
         <section>
-          <h2>Capturing the Logs</h2>
-          <p>Paper logs often hard to read or interpret...</p>
-          <img width="1024" data-src="eQSL/paper_log.jpg" />
+          <section>
+            <h2>Capturing the Logs</h2>
+            <p>Paper logs often hard to read or interpret...</p>
+          </section>
+          <section>
+            <img width="1536" data-src="eQSL/paper_log.jpg" />
+          </section>
         </section>
         <section>
           <h2>XLog</h2>
@@ -126,51 +143,99 @@
         <section>
           <h2>LoTW</h2>
           <h3>Review Confirmed QSOs</h3>
-          <video>
+          <video controls>
+            <source data-src="eQSL/LoTW_Review_QSOs.mp4" type="video/mp4" />
           </video>
         </section>
         <section>
-          <h3>Setup Trusted QSL</h3>
-          <p>Uploads are done by a certificate-secured program called '<strong>Trusted QSL</strong>'</p>
-          <p>The first time, you need to request a certificate from the computer where it will be used.  I got a new laptop and had to re-apply.</p>
-          <p>It is possible to have more than one certificate/callsign/location, and club callsigns are supported.</p>
+          <h3>Setup TrustedQSL</h3>
+          <ol>
+            <li class="fragment">Uploads are done by a certificate-secured program called '<strong>TrustedQSL</strong>'</li>
+            <li class="fragment">The first time, you need to request a certificate from the computer where it will be used.  I got a new laptop and had to re-apply.</li>
+            <li class="fragment">It is possible to have more than one certificate/callsign/location, and club callsigns are supported.</li>
+          </ol>
           <video>
+            <source data-src="eQSL/Upload_LoTW_Log.avi" />
           </video>
         </section>
         <section>
-          <h3>Upload ADIF Log File</h3>
-          <p>Uploads are done by a certificate-secured program called 'tQSL' (<strong>Trusted QSL</strong>)</p>
-          <video>
+          <h3>Upload Log File to LoTW using TrustedQSl</h3>
+          <video controls>
+            <source src="eQSL/Upload_LoTW_Log.mp4" />
           </video>
         </section>
         <section>
           <h2>eQSL</h2>
+          <video controls>
+            <source data-src="eQSL/Upload_eQSL_Log.mp4" type="video/mp4" />
+          </video>
         </section>
         <section>
           <h2>SARL</h2>
+          <h3>Requirements for Capturing QSLs:</h3>
+          <ol>
+            <li class="fragment">The QSL account for CTARC needs to be linked to the profile of a paid up SARL member.  You do this by emailing a request to the webmaster of the SARL site at webmaster@sarl.org.za.</li>
+            <li class="fragment">The site accepts only <strong>new ADIF format</strong> uploads, or CSV files with the following format:
+              <ul>
+                <li><pre>ZS0123,SSB,20050811,1200,40m</pre></li>
+              </ul>
+            </li>
+            <li class="fragment">The process is buggy and I ended up sending the CSV file to the webmaster by email to upload.</li>
+          </ol>
         </section>
         <section>
           <h1>Log Formats</h1>
+          <h2>ADIF</h2>
+          <p><b>A</b>mateur <b>D</b>ata <b>I</b>nterchange <b>F</b>ormat</p>
+          <pre>
+ADIF Export from xlog Version 2.0.13
+Copyright (C) 2012 Andy Stewart &lt;andystewart@comcast.net&gt;
+Copyright (C) 2001-2010 Joop Stakenborg &lt;pg4i@amsat.org&gt;
+Internet:  http://savannah.nongnu.org/projects/Xlog
+
+Date of export: 06 Feb 2018 16:08:09
+Callsign: ZS1CJO
+Locator: JF95FW
+
+&lt;ADIF_VER:5&gt;2.2.7
+&lt;EOH&gt;
+&lt;QSO_DATE:8&gt;20170819 &lt;TIME_ON:4&gt;1000 &lt;CALL:4&gt;ZS9V &lt;FREQ:1&gt;7 &lt;MODE:3&gt;SSB &lt;RST_SENT:2&gt;59 &lt;RST_RCVD:2&gt;59 &lt;TX_PWR:3&gt;100 &lt;NAME:5&gt;Andre &lt;QTH:13&gt;Robben Island &lt;COMMENT:27&gt;ZS1CT @ JF96EC73XP for ILLW 
+&lt;EOR&gt;
+&lt;QSO_DATE:8&gt;20170819 &lt;TIME_ON:4&gt;1035 &lt;CALL:5&gt;ZS1CO &lt;FREQ:1&gt;7 &lt;MODE:3&gt;SSB &lt;RST_SENT:2&gt;59 &lt;RST_RCVD:2&gt;59 &lt;TX_PWR:3&gt;100 &lt;NAME:4&gt;Mike &lt;COMMENT:27&gt;ZS1CT @ JF96EC73XP for ILLW 
+&lt;EOR&gt;
+...
+          </pre>
         </section>
-			</div>
-		</div>
+        <section>
+          <h2>CSV</h2>
+          <p><b>C</b>omma <b>S</b>eparated <b>V</b>alues.</p>
+          <pre>
+V51B,SSB,20160820,1104,40m
+ZS1ROD,SSB,20160820,1106,40m
+ZS2ABZ/L,SSB,20160820,1108,40m
+ZS3RW/L,SSB,20160820,1109,40m
+ZS1VDP/L,SSB,20160820,1114,40m
+          </pre>
+        </section>
+      </div>
+    </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
         transition: 'zoom',
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
 </html>
