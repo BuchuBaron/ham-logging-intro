@@ -16,7 +16,18 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
     <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/night.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+    <!--
+      - black: Black background, white text, blue links (default theme)
+      - white: White background, black text, blue links
+      - league: Gray background, white text, blue links (default theme for reveal.js < 3.0.0)
+      - beige: Beige background, dark text, brown links
+      - sky: Blue background, thin dark text, blue links
+      - night: Black background, thick white text, orange links
+      - serif: Cappuccino background, gray text, brown links
+      - simple: White background, black text, blue links
+      - solarized: Cream-colored background, dark green text, blue links
+    -->
 
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -71,19 +82,22 @@
             </ol>
           </section>
           <section>
-            <h2>Why You Should Keep Your Logs Online:</h2>
-            <ol>
-              <li class="fragment highlight-red"><strong>Safer:</strong> your logs are kept and managed by professionals and are safer from computer crashes or theft</li>
-              <li class="fragment"><strong>More Functionality:</strong>
+            <h2>Why Online Logs:</h2>
+              <h3>1. Safer:</h3>
+                <ul>
+                  <li class="fragment"> your logs are kept and managed by professionals and are safer from computer crashes or theft</li>
+                </ul>
+              <h3>2. More Functionality:</h3>
                 <ul>
                   <li class="fragment">Easy for others to confirm QSOs</li>
                   <li class="fragment">Sophisticated reporting tools</li>
                   <li class="fragment">Automatic/Manual submissions for various awards</li>
                   <li class="fragment">Look up details of a callsign</li>
                 </ul>
-              </li>
-              <li class="fragment highlight-blue"><strong>Cheaper:</strong> no postage fees and hassle</li>
-            </ol>
+              <h3>Cheaper:</h3>
+                <ul>
+                  <li class="fragment">no postage fees and hassle</li>
+                </ul>
           </section>
           <section>
             <h3>Review Confirmed QSOs (LoTW)</h3>
@@ -253,6 +267,7 @@ ZS1VDP/L,SSB,20160820,1114,40m
       // - https://github.com/hakimel/reveal.js#configuration
       // - https://github.com/hakimel/reveal.js#dependencies
       Reveal.initialize({
+        width: 1024,
         transition: 'zoom',
         dependencies: [
           { src: 'plugin/markdown/marked.js' },
