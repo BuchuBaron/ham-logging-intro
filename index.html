@@ -16,7 +16,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
     <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/theme/solarized.css">
     <!--
       - black: Black background, white text, blue links (default theme)
       - white: White background, black text, blue links
@@ -54,8 +54,14 @@
           <ol>
             <li>Quiz</li>
             <li>Intro to Electronic Logging</li>
-            <li>The CTARC ILLS Weekend Logging Process</li>
-            <li>Log Format Examples</li>
+            <li>The CTARC ILLS Weekend Logging Process
+              <ul>
+                <li>Capturing Log Data</li>
+                <li>Exporting Log Data</li>
+                <li>Log Format Examples</li>
+                <li>Importing to Online Sites</li>
+              </ul>
+            </li>
           </ol>
         </section>
         <section>
@@ -93,11 +99,10 @@
               <h4>2. More Functionality:</h4>
                 <ul>
                   <li class="fragment">Easy for others to confirm QSOs</li>
-                  <li class="fragment">Sophisticated reporting tools</li>
                   <li class="fragment">Automatic/Manual submissions for various awards</li>
                   <li class="fragment">Look up details of a callsign</li>
                 </ul>
-              <h4>Cheaper:</h4>
+              <h4>3. Cheaper:</h4>
                 <ul>
                   <li class="fragment">no postage fees and hassle</li>
                 </ul>
@@ -114,11 +119,11 @@
           <section>
             <h2>Online QSL Sites:</h2>
             <ol>
-              <li><strong>LoTW*:</strong> lotw.arrl.org/lotwuser/default</li>
-              <li><strong>eQSL*:</strong> www.eqsl.cc</li>
-              <li><strong>SARL*:</strong> sarl.org.za</li>
-              <li><strong>ClubLog:</strong> www.clublog.org</li>
-              <li><strong>QRZ.com:</strong> qrz.com</li>
+              <li><strong>LoTW*:</strong> <a href="https://lotw.arrl.org/lotwuser/default">lotw.arrl.org</a></li>
+              <li><strong>eQSL*:</strong> <a href="https://www.eqsl.cc">www.eqsl.cc</a></li>
+              <li><strong>SARL*:</strong> <a href="http://www.sarl.org.za">www.sarl.org.za</a></li>
+              <li><strong>ClubLog:</strong> <a href="https://www.clublog.org">www.clublog.org</a></li>
+              <li><strong>QRZ.com:</strong> <a href="https://qrz.com">qrz.com</a></li>
             </ol>
             <p><em>* Used by CTARC</em></p>
           </section>
@@ -143,8 +148,11 @@
             <ul>
               <li class="fragment">For local contests, QSLs and Awards.</li>
               <li class="fragment">For SARL members only.</li>
-              <li class="fragment">Current online logging mechanisms hand-built and not very robust.</li>
+              <li class="fragment">Current online logging mechanisms not very robust.</li>
             </ul>
+            <aside class="notes">
+              <p>And that is why I didn't bother videoing the process.</p>
+            </aside>
           </section>
         </section>
         <section>
@@ -176,23 +184,59 @@
           <img data-src="eQSL/xlog.jpg" />
         </section>
         <section>
-          <h3>Exporting from XLog</h3>
-          <p>We need to export to:</p>
-          <ol>
-            <li>ADIF, and</li>
-            <li>CSV.</li>
-          </ol>
+          <section>
+            <h3>Exporting from XLog</h3>
+            <p>We need to export to:</p>
+            <ol>
+              <li>ADIF (for LoTW and eQSL), and</li>
+              <li>CSV (for SARL).</li>
+            </ol>
+          </section>
+          <section>
+            <h1>Log Formats</h1>
+            <h2>ADIF</h2>
+            <p><b>A</b>mateur <b>D</b>ata <b>I</b>nterchange <b>F</b>ormat</p>
+            <pre>
+  ADIF Export from xlog Version 2.0.13
+  Copyright (C) 2012 Andy Stewart &lt;andystewart@comcast.net&gt;
+  Copyright (C) 2001-2010 Joop Stakenborg &lt;pg4i@amsat.org&gt;
+  Internet:  http://savannah.nongnu.org/projects/Xlog
+
+  Date of export: 06 Feb 2018 16:08:09
+  Callsign: ZS1CJO
+  Locator: JF95FW
+
+  &lt;ADIF_VER:5&gt;2.2.7
+  &lt;EOH&gt;
+  &lt;QSO_DATE:8&gt;20170819 &lt;TIME_ON:4&gt;1000 &lt;CALL:4&gt;ZS9V &lt;FREQ:1&gt;7 &lt;MODE:3&gt;SSB &lt;RST_SENT:2&gt;59 &lt;RST_RCVD:2&gt;59 &lt;TX_PWR:3&gt;100 &lt;NAME:5&gt;Andre &lt;QTH:13&gt;Robben Island &lt;COMMENT:27&gt;ZS1CT @ JF96EC73XP for ILLW 
+  &lt;EOR&gt;
+  &lt;QSO_DATE:8&gt;20170819 &lt;TIME_ON:4&gt;1035 &lt;CALL:5&gt;ZS1CO &lt;FREQ:1&gt;7 &lt;MODE:3&gt;SSB &lt;RST_SENT:2&gt;59 &lt;RST_RCVD:2&gt;59 &lt;TX_PWR:3&gt;100 &lt;NAME:4&gt;Mike &lt;COMMENT:27&gt;ZS1CT @ JF96EC73XP for ILLW 
+  &lt;EOR&gt;
+  ...
+            </pre>
+          </section>
+          <section>
+            <h2>CSV</h2>
+            <p><b>C</b>omma <b>S</b>eparated <b>V</b>alues.</p>
+            <pre>
+  V51B,SSB,20160820,1104,40m
+  ZS1ROD,SSB,20160820,1106,40m
+  ZS2ABZ/L,SSB,20160820,1108,40m
+  ZS3RW/L,SSB,20160820,1109,40m
+  ZS1VDP/L,SSB,20160820,1114,40m
+            </pre>
+          </section>
         </section>
         <section>
           <h2>Importing Log Data to QSL Websites</h2>
         </section>
         <section>
-          <h2>LoTW</h2>
+          <h2>1. LoTW</h2>
           <h3>Setup TrustedQSL</h3>
           <ol>
             <li class="fragment">Uploads are done by a certificate-secured program called '<strong>TrustedQSL</strong>'</li>
-            <li class="fragment">The first time, you need to request a certificate from the computer where it will be used.  I got a new laptop and had to re-apply.</li>
-            <li class="fragment">It is possible to have more than one certificate/callsign/location, and club callsigns are supported.</li>
+            <li class="fragment">The first time, you need to request a certificate from the computer where it will be used.  When I got a new laptop I had to re-apply for a certificate (<em>can be avoided if you take a backup of the configuration</em>).</li>
+            <li class="fragment">You can have more than one certificate/callsign/location, and club callsigns are supported.</li>
           </ol>
           <video>
             <source data-src="eQSL/Upload_LoTW_Log.avi" />
@@ -205,13 +249,13 @@
           </video>
         </section>
         <section>
-          <h2>eQSL</h2>
+          <h2>2. eQSL</h2>
           <video controls>
             <source data-src="eQSL/Upload_eQSL_Log.mp4" type="video/mp4" />
           </video>
         </section>
         <section>
-          <h2>SARL</h2>
+          <h2>3. SARL</h2>
           <h3>Requirements for Capturing QSLs:</h3>
           <ol>
             <li class="fragment">The QSL account for CTARC needs to be linked to the profile of a paid up SARL member.  You do this by emailing a request to the webmaster of the SARL site at webmaster@sarl.org.za.</li>
@@ -224,42 +268,10 @@
           </ol>
         </section>
         <section>
-          <h1>Log Formats</h1>
-          <h2>ADIF</h2>
-          <p><b>A</b>mateur <b>D</b>ata <b>I</b>nterchange <b>F</b>ormat</p>
-          <pre>
-ADIF Export from xlog Version 2.0.13
-Copyright (C) 2012 Andy Stewart &lt;andystewart@comcast.net&gt;
-Copyright (C) 2001-2010 Joop Stakenborg &lt;pg4i@amsat.org&gt;
-Internet:  http://savannah.nongnu.org/projects/Xlog
-
-Date of export: 06 Feb 2018 16:08:09
-Callsign: ZS1CJO
-Locator: JF95FW
-
-&lt;ADIF_VER:5&gt;2.2.7
-&lt;EOH&gt;
-&lt;QSO_DATE:8&gt;20170819 &lt;TIME_ON:4&gt;1000 &lt;CALL:4&gt;ZS9V &lt;FREQ:1&gt;7 &lt;MODE:3&gt;SSB &lt;RST_SENT:2&gt;59 &lt;RST_RCVD:2&gt;59 &lt;TX_PWR:3&gt;100 &lt;NAME:5&gt;Andre &lt;QTH:13&gt;Robben Island &lt;COMMENT:27&gt;ZS1CT @ JF96EC73XP for ILLW 
-&lt;EOR&gt;
-&lt;QSO_DATE:8&gt;20170819 &lt;TIME_ON:4&gt;1035 &lt;CALL:5&gt;ZS1CO &lt;FREQ:1&gt;7 &lt;MODE:3&gt;SSB &lt;RST_SENT:2&gt;59 &lt;RST_RCVD:2&gt;59 &lt;TX_PWR:3&gt;100 &lt;NAME:4&gt;Mike &lt;COMMENT:27&gt;ZS1CT @ JF96EC73XP for ILLW 
-&lt;EOR&gt;
-...
-          </pre>
-        </section>
-        <section>
-          <h2>CSV</h2>
-          <p><b>C</b>omma <b>S</b>eparated <b>V</b>alues.</p>
-          <pre>
-V51B,SSB,20160820,1104,40m
-ZS1ROD,SSB,20160820,1106,40m
-ZS2ABZ/L,SSB,20160820,1108,40m
-ZS3RW/L,SSB,20160820,1109,40m
-ZS1VDP/L,SSB,20160820,1114,40m
-          </pre>
-        </section>
-        <section>
           <h1>Thanks...</h1>
           <p>... to CTARC for the opportunity to learn about electronic logging.</p>
+          <h2>Copy of these slides at ...</h2>
+          <a href="https://buchubaron.github.io/ham-logging-intro/">https://buchubaron.github.io/ham-logging-intro/</a>
           <p>Charles (ZS1CJO)<br />charles@honeybadger.net</p>
         </section>
       </div>
@@ -273,6 +285,7 @@ ZS1VDP/L,SSB,20160820,1114,40m
       // - https://github.com/hakimel/reveal.js#configuration
       // - https://github.com/hakimel/reveal.js#dependencies
       Reveal.initialize({
+        defaultTiming: 120,
         width: 1024,
         transition: 'zoom',
         dependencies: [
